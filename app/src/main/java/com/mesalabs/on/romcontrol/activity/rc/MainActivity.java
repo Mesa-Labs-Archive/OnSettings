@@ -74,7 +74,7 @@ public class MainActivity extends BaseAppBarActivity {
         // init UX
         removeViewRoundedCorners();
 
-        setBaseContentView(R.layout.mesa_activity_mainactivity_layout);
+        setBaseContentView(R.layout.mesa_rc_activity_mainactivity_layout);
 
         appBar = new ActionBarUtils(this);
         appBar.initAppBar(false);
