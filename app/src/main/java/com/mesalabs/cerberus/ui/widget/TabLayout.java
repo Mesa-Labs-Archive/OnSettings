@@ -12,7 +12,7 @@ import android.view.Window;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-import com.mesalabs.cerberus.R;
+import com.mesalabs.on.romcontrol.R;
 import com.mesalabs.cerberus.utils.Utils;
 import com.mesalabs.cerberus.utils.ViewUtils;
 import com.samsung.android.ui.tabs.SeslTabLayout;
@@ -53,7 +53,7 @@ public class TabLayout extends SeslTabLayout implements View.OnSystemUiVisibilit
                 TextView textView = tab.seslGetTextView();
                 mTextViews.add(textView);
                 if (textView != null) {
-                    tabView.setContentDescription(textView.getText() + " " + getResources().getString(R.string.mesa_tab_tts, new Object[]{tabPosition + 1, 4}));
+                    tabView.setContentDescription(textView.getText() + " " + getResources().getString(R.string.mesa_tab_tts, new Object[]{tabPosition + 1, getTabCount()}));
                 }
                 tabView.setPointerIcon(PointerIcon.getSystemIcon(getContext(), 1000));
             }

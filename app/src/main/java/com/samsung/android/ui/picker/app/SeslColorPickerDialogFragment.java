@@ -17,7 +17,7 @@ import androidx.annotation.RestrictTo;
 import androidx.appcompat.app.AppCompatDialogFragment;
 import androidx.fragment.app.FragmentActivity;
 
-import com.mesalabs.cerberus.R;
+import com.mesalabs.on.romcontrol.R;
 import com.samsung.android.ui.app.SeslAlertDialog;
 import com.samsung.android.ui.picker.widget.SeslColorPicker;
 

@@ -1,7 +1,6 @@
 <resources>
     <string name="mesa_cerberuscore">Cerberus Core</string>
 
-    <string name="mesa_cerberustestux">Cerberus UI Test</string>
 
     <string name="mesa_pleasewait">Please wait...</string>
     <string name="mesa_cancel">Cancel</string>
@@ -20,7 +19,7 @@
     <string name="mesa_version">Version</string>
     <string name="mesa_app_info">App info</string>
 
-    <string name="mesa_downloading">Downloading update…</string>
+    <string name="mesa_downloading">Downloading update...</string>
     <string name="mesa_download_failed">Download failed.</string>
 
 

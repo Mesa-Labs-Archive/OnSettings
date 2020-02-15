@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?round_and_bgColor"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mesalabs.cerberus.ui.widget.RoundFrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="?round_and_bgColor"
+        app:roundedCorners="bottom_left|bottom_right"
+        app:cornersStroke="false">
+        <com.samsung.android.ui.coordinatorlayout.widget.SeslCoordinatorLayout
+            android:id="@+id/mesa_coordinatorlayout_mainactivity"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="?round_and_bgColor">
+            <include layout="@layout/mesa_appbar_layout"/>
+            <FrameLayout
+                android:id="@+id/mesa_fragmentcontainer_mainactivity"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="?cardBgColor"
+                app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior" />
+        </com.samsung.android.ui.coordinatorlayout.widget.SeslCoordinatorLayout>
+    </com.mesalabs.cerberus.ui.widget.RoundFrameLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/mesa_bottomlayout_mainactivity"
+        android:background="?round_and_bgColor"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mesa_tab_height">
+        <com.mesalabs.cerberus.ui.widget.TabLayout
+            android:id="@+id/mesa_tablayout_mainactivity"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="?tabLayoutStyle"/>
+    </RelativeLayout>
+</LinearLayout>

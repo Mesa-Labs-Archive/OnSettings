@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import androidx.annotation.RestrictTo;
 import androidx.core.content.ContextCompat;
 
-import com.mesalabs.cerberus.R;
+import com.mesalabs.on.romcontrol.R;
 import com.samsung.android.ui.widget.SeslSeekBar;
 
 /*

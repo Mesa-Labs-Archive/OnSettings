@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- #App Day/Night Mode Themes# -->
+    <style name="mesa_RC_AppStyle.DayNight" parent="@style/mesa_RC_AppStyle.Light" />
+    <style name="mesa_AboutActivity_AppStyle.DayNight" parent="@style/mesa_AboutActivity_AppStyle.Light" />
+
+    <!-- #Activity Themes# -->
+    <!-- MainActivity -->
+    <style name="mesa_RC_AppStyle" parent="@style/mesa_AppStyle.NoActionBar">
+        <item name="colorPrimaryDark">@color/sesl_primary_dark_color_dark</item>
+        <item name="colorPrimary">@color/sesl_primary_color_dark</item>
+        <item name="colorControlActivated">@color/sesl_control_activated_color</item>
+        <item name="progressActivatedColor">@color/sesl_progress_control_color_activated_dark</item>
+        <item name="progressNormalColor">@color/sesl_progress_control_color_normal_dark</item>
+        <item name="tabLayoutStyle">@style/mesa_RC_SeslTabLayoutStyle</item>
+    </style>
+    <style name="mesa_RC_AppStyle.Light" parent="@style/mesa_AppStyle.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/sesl_primary_dark_color_light</item>
+        <item name="colorPrimary">@color/sesl_primary_color_light</item>
+        <item name="colorControlActivated">@color/sesl_control_activated_color</item>
+        <item name="progressActivatedColor">@color/sesl_progress_control_color_activated_light</item>
+        <item name="progressNormalColor">@color/sesl_progress_control_color_normal_light</item>
+        <item name="tabLayoutStyle">@style/mesa_RC_SeslTabLayoutStyle.Light</item>
+    </style>
+
+    <!-- AboutActivity -->
+    <style name="mesa_AboutActivity_AppStyle.Light" parent="@style/mesa_AppStyle.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/mesa_bg_color_baseaboutactivity</item>
+        <item name="android:navigationBarColor">@color/mesa_navigation_bar_color_baseaboutactivity</item>
+        <item name="android:windowBackground">@color/mesa_bg_color_baseaboutactivity</item>
+        <item name="round_and_bgColor">@color/mesa_bg_color_baseaboutactivity</item>
+        <item name="roundedCornerColor">@color/mesa_bg_color_baseaboutactivity</item>
+    </style>
+
+    <!-- #App Styles# -->
+    <!-- Sesl TabLayout-->
+    <style name="mesa_RC_SeslTabLayoutStyle" parent="@style/mesa_SeslTabLayoutStyle">
+        <item name="tabIndicatorColor">?colorPrimary</item>
+        <item name="tabSelectedTextColor">?colorPrimary</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabGravity">center</item>
+    </style>
+    <style name="mesa_RC_SeslTabLayoutStyle.Light" parent="@style/mesa_RC_SeslTabLayoutStyle">
+        <item name="tabBackground">@drawable/sesl_tablayout_tab_background</item>
+        <item name="tabTextAppearance">@style/mesa_SeslTabTextStyle.Light</item>
+    </style>
+</resources>

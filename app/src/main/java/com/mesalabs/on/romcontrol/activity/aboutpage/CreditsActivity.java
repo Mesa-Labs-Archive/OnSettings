@@ -1,19 +1,17 @@
-package com.mesalabs.cerberus.activity;
+package com.mesalabs.on.romcontrol.activity.aboutpage;
 
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.mesalabs.cerberus.R;
+import com.mesalabs.on.romcontrol.R;
 import com.mesalabs.cerberus.base.BaseAppBarActivity;
-import com.samsung.android.ui.preference.SeslPreference;
 import com.samsung.android.ui.preference.SeslPreferenceFragmentCompat;
 
 /*
- * Cerberus Core App
+ * On Settings
  *
  * Coded by BlackMesa @2020
  *
@@ -22,9 +20,6 @@ import com.samsung.android.ui.preference.SeslPreferenceFragmentCompat;
  * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * ULTRA-MEGA-PRIVATE SOURCE CODE. SHARING TO DEVKINGS TEAM
- * EXTERNALS IS PROHIBITED AND WILL BE PUNISHED WITH ANAL ABUSE.
  */
 
 public class CreditsActivity extends BaseAppBarActivity {
