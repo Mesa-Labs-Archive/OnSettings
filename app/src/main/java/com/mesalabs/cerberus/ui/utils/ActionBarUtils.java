@@ -145,6 +145,15 @@ public class ActionBarUtils {
         return measuredWidth + 25;
     }
 
+    public ToolbarImageButton getOverflowIcon(int index) {
+        if (overflowContainer != null && overflowContainer.getChildCount() != 0) {
+            return (ToolbarImageButton) overflowContainer.getChildAt(index);
+        } else {
+            LogUtils.w(activity.getLocalClassName() + ".getOverflowIcon", "overflowContainer is null or contains no icons.");
+            return null;
+        }
+    }
+
     public void initAppBar(boolean isExpanded) {
         toolbar = activity.findViewById(R.id.mesa_toolbar_appbarlayout);
         activity.setSupportActionBar(toolbar);
