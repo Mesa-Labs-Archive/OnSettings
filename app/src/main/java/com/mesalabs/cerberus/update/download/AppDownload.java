@@ -92,11 +92,12 @@ public class AppDownload extends AsyncTask<Void, Integer, String> {
             Cursor cursor = mDownloadManager.query(q);
             cursor.moveToFirst();
             try {
-                if (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)) == DownloadManager.STATUS_SUCCESSFUL) {
+                if (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)) != DownloadManager.STATUS_RUNNING) {
+                    mIsRunning = false;
+                } else if (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)) == DownloadManager.STATUS_SUCCESSFUL) {
                     downloadFileUrl = cursor.getString(cursor.getColumnIndex(DownloadManager.COLUMN_LOCAL_URI));
                     mIsRunning = false;
                 } else if (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)) == DownloadManager.STATUS_FAILED) {
-                    Toast.makeText(mContext, R.string.mesa_download_failed, Toast.LENGTH_LONG).show();
                     mIsRunning = false;
                 }
 
@@ -129,8 +130,10 @@ public class AppDownload extends AsyncTask<Void, Integer, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        if (result == null || result.isEmpty())
+        if (result == null || result.isEmpty()) {
+            Toast.makeText(mContext, R.string.mesa_download_failed, Toast.LENGTH_LONG).show();
             return;
+        }
 
         Intent intent = new Intent();
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
