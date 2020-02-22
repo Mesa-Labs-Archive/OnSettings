@@ -46,6 +46,9 @@ public class CreditsActivity extends BaseAppBarActivity {
 
         mFragmentManager.executePendingTransactions();
 
+        TextView desc = findViewById(R.id.mesa_textview_creditsactivity);
+        desc.setPadding(desc.getPaddingLeft(), desc.getPaddingTop() - appBar.getAppBarLayout().getPaddingBottom(), desc.getPaddingRight(), desc.getPaddingBottom());
+
     }
 
     @Override

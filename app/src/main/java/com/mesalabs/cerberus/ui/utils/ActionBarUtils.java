@@ -145,6 +145,10 @@ public class ActionBarUtils {
         return measuredWidth + 25;
     }
 
+    public SeslAppBarLayout getAppBarLayout() {
+        return appBarLayout;
+    }
+
     public ToolbarImageButton getOverflowIcon(int index) {
         if (overflowContainer != null && overflowContainer.getChildCount() != 0) {
             return (ToolbarImageButton) overflowContainer.getChildAt(index);
