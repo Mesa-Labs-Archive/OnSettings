@@ -18,6 +18,21 @@ import com.mesalabs.on.romcontrol.R;
 import com.samsung.android.ui.app.SeslAlertDialog;
 import com.samsung.android.ui.widget.SeslProgressBar;
 
+/*
+ * Cerberus Core App
+ *
+ * Coded by BlackMesa @2020
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * ULTRA-MEGA-PRIVATE SOURCE CODE. SHARING TO DEVKINGS TEAM
+ * EXTERNALS IS PROHIBITED AND WILL BE PUNISHED WITH ANAL ABUSE.
+ */
+
 public class ProgressDialog extends SeslAlertDialog {
     public static final int STYLE_SPINNER = 0;
     public static final int STYLE_HORIZONTAL = 1;

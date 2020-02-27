@@ -21,7 +21,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.mesalabs.on.romcontrol.R;
-import com.mesalabs.cerberus.utils.LogUtils;
+import com.mesalabs.on.romcontrol.utils.LogUtils;
 import com.samsung.android.ui.preference.internal.AbstractMultiSelectListPreference;
 import com.samsung.android.ui.util.SeslRoundedCorner;
 import com.samsung.android.ui.util.SeslSubheaderRoundedCorner;

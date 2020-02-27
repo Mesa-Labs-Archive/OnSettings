@@ -1,11 +1,11 @@
-package com.mesalabs.cerberus.utils;
+package com.mesalabs.on.romcontrol.utils;
 
 import android.util.Log;
 
 import com.mesalabs.on.romcontrol.OnSettingsApp;
 
 /*
- * Cerberus Core App
+ * On Settings
  *
  * Coded by BlackMesa @2020
  *
@@ -14,59 +14,56 @@ import com.mesalabs.on.romcontrol.OnSettingsApp;
  * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * ULTRA-MEGA-PRIVATE SOURCE CODE. SHARING TO DEVKINGS TEAM
- * EXTERNALS IS PROHIBITED AND WILL BE PUNISHED WITH ANAL ABUSE.
  */
 
 public class LogUtils {
     // Verbose
     public static void v(String tag, String msg) {
         if (OnSettingsApp.isDebugBuild())
-            Log.v("CerberusCore: " + tag, msg);
+            Log.v("OnSettings: " + tag, msg);
     }
 
     // Debug
     public static void d(String tag, String msg) {
         if (OnSettingsApp.isDebugBuild())
-            Log.d("CerberusCore: " + tag, msg);
+            Log.d("OnSettings: " + tag, msg);
     }
 
     public static void d(String tag, String msg, Exception e) {
         if (OnSettingsApp.isDebugBuild())
-            Log.d("CerberusCore: " + tag, msg, e);
+            Log.d("OnSettings: " + tag, msg, e);
     }
 
     public static void d(String tag, String msg, Throwable t) {
         if (OnSettingsApp.isDebugBuild())
-            Log.d("CerberusCore: " + tag, msg, t);
+            Log.d("OnSettings: " + tag, msg, t);
     }
 
     // Info
     public static void i(String tag, String msg) {
         if (OnSettingsApp.isDebugBuild())
-            Log.i("CerberusCore: " + tag, msg);
+            Log.i("OnSettings: " + tag, msg);
     }
 
     public static void i(String tag, String msg, Exception e) {
         if (OnSettingsApp.isDebugBuild())
-            Log.i("CerberusCore: " + tag, msg, e);
+            Log.i("OnSettings: " + tag, msg, e);
     }
 
     // Warn
     public static void w(String tag, String msg) {
         if (OnSettingsApp.isDebugBuild())
-            Log.w("CerberusCore: " + tag, msg);
+            Log.w("OnSettings: " + tag, msg);
     }
 
     public static void w(String tag, String msg, Exception e) {
         if (OnSettingsApp.isDebugBuild())
-            Log.w("CerberusCore: " + tag, msg, e);
+            Log.w("OnSettings: " + tag, msg, e);
     }
 
     // Error
     public static void e(String tag, String msg) {
         if (OnSettingsApp.isDebugBuild())
-            Log.e("CerberusCore: " + tag, msg);
+            Log.e("OnSettings: " + tag, msg);
     }
 }

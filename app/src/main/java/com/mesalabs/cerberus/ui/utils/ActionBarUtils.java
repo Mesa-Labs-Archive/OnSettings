@@ -27,7 +27,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.mesalabs.on.romcontrol.R;
 import com.mesalabs.cerberus.ui.widget.ToolbarImageButton;
 import com.mesalabs.cerberus.utils.CerberusException;
-import com.mesalabs.cerberus.utils.LogUtils;
+import com.mesalabs.on.romcontrol.utils.LogUtils;
 import com.mesalabs.cerberus.utils.Utils;
 import com.mesalabs.cerberus.utils.ViewUtils;
 import com.samsung.android.ui.appbar.SeslAppBarLayout;
@@ -329,6 +329,11 @@ public class ActionBarUtils {
 
     public void setHomeAsUpButton(View.OnClickListener ocl) {
         setHomeAsUpButton(0, 0, ocl);
+    }
+
+    public void setHomeAsUpButtonVisible(boolean visible) {
+        toolbarHomeButton.setVisibility(visible ? View.VISIBLE : View.GONE);
+        toolbar.setPaddingRelative(visible ? 0 : activity.getResources().getDimensionPixelSize(R.dimen.sesl_action_bar_content_inset), 0, 0, 0);
     }
 
     public void setHomeAsUpButton(int iconResId, int contentDescResId, View.OnClickListener ocl) {

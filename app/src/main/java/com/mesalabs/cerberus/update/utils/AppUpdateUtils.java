@@ -18,7 +18,7 @@ import com.mesalabs.on.romcontrol.R;
 import com.mesalabs.cerberus.update.data.AppData;
 import com.mesalabs.cerberus.update.download.AppDownload;
 import com.mesalabs.cerberus.update.tasks.AppXMLParser;
-import com.mesalabs.cerberus.utils.LogUtils;
+import com.mesalabs.on.romcontrol.utils.LogUtils;
 
 /*
  * Cerberus Core App
@@ -39,7 +39,7 @@ import com.mesalabs.cerberus.utils.LogUtils;
 public class AppUpdateUtils {
     private static final String TAG = "AppUpdateUtils";
     private static final String DOWNLOAD_DIR = "updates";
-    private static final String UPDATE_XML = "https://gitlab.com/BlackMesa123/otatest/-/raw/eb5d8466245068531f889f472eb64aece46bd519/testmanifest.xml";
+    private static final String UPDATE_XML = "https://gitlab.com/BlackMesa123/otatest/-/raw/master/testmanifest.xml";
 
     public static final int STATE_NO_UPDATES = 1;
     public static final int STATE_NEW_VERSION_AVAILABLE = 2;

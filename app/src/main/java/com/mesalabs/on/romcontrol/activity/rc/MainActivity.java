@@ -7,6 +7,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+
+import java.io.IOException;
 import java.util.LinkedHashMap;
 
 import androidx.fragment.app.Fragment;
@@ -212,7 +214,7 @@ public class MainActivity extends BaseAppBarActivity {
 
     private LinkedHashMap<String, Integer> initMoreMenuButtonList() {
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        linkedHashMap.put("About Cerberus UX Test", mUpdateAvailable ? ActionBarUtils.NEW_UPDATE_AVAILABLE : 0);
+        linkedHashMap.put(getString(R.string.mesa_about_app), mUpdateAvailable ? ActionBarUtils.NEW_UPDATE_AVAILABLE : 0);
         return linkedHashMap;
     }
 
@@ -224,7 +226,7 @@ public class MainActivity extends BaseAppBarActivity {
                         appBar.dismissMoreMenuPopupWindow();
 
                         String obj = adapterView.getAdapter().getItem(i).toString();
-                        if (obj.equals("About Cerberus UX Test")) {
+                        if (obj.equals(getString(R.string.mesa_about_app))) {
                             startActivity(new Intent(mContext, AboutActivity.class));
                         }
                     }

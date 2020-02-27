@@ -43,7 +43,7 @@ import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.internal.CollapsingTextHelper;
 
 import com.mesalabs.on.romcontrol.R;
-import com.mesalabs.cerberus.utils.LogUtils;
+import com.mesalabs.on.romcontrol.utils.LogUtils;
 import com.mesalabs.cerberus.utils.ViewUtils;
 
 /*

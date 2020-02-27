@@ -17,7 +17,7 @@ import android.widget.TextView;
 import androidx.appcompat.view.ContextThemeWrapper;
 
 import com.mesalabs.on.romcontrol.R;
-import com.mesalabs.cerberus.utils.LogUtils;
+import com.mesalabs.on.romcontrol.utils.LogUtils;
 
 /*
  * Cerberus Core App

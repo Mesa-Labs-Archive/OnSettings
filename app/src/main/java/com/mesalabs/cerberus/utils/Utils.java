@@ -3,7 +3,6 @@ package com.mesalabs.cerberus.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.util.TypedValue;
-import android.view.ViewGroup;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -11,6 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import com.mesalabs.on.romcontrol.R;
+import com.mesalabs.on.romcontrol.utils.LogUtils;
 
 /*
  * Cerberus Core App

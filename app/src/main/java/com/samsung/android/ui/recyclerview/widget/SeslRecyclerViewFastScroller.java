@@ -28,7 +28,7 @@ import android.widget.SectionIndexer;
 import android.widget.TextView;
 
 import com.mesalabs.on.romcontrol.R;
-import com.mesalabs.cerberus.utils.LogUtils;
+import com.mesalabs.on.romcontrol.utils.LogUtils;
 import com.mesalabs.cerberus.utils.ViewUtils;
 
 /*

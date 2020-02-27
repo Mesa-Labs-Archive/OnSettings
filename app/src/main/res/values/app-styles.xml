@@ -12,6 +12,7 @@
         <item name="colorControlActivated">@color/sesl_control_activated_color</item>
         <item name="progressActivatedColor">@color/sesl_progress_control_color_activated_dark</item>
         <item name="progressNormalColor">@color/sesl_progress_control_color_normal_dark</item>
+        <item name="preferenceTheme">@style/mesa_RC_PreferenceThemeStyle</item>
         <item name="tabLayoutStyle">@style/mesa_RC_SeslTabLayoutStyle</item>
     </style>
     <style name="mesa_RC_AppStyle.Light" parent="@style/mesa_AppStyle.Light.NoActionBar">
@@ -20,6 +21,7 @@
         <item name="colorControlActivated">@color/sesl_control_activated_color</item>
         <item name="progressActivatedColor">@color/sesl_progress_control_color_activated_light</item>
         <item name="progressNormalColor">@color/sesl_progress_control_color_normal_light</item>
+        <item name="preferenceTheme">@style/mesa_RC_PreferenceThemeStyle</item>
         <item name="tabLayoutStyle">@style/mesa_RC_SeslTabLayoutStyle.Light</item>
     </style>
 
@@ -33,10 +35,22 @@
     </style>
 
     <!-- #App Styles# -->
+    <!-- SeslPreference -->
+    <style name="mesa_RC_PreferenceThemeStyle" parent="@style/mesa_PreferenceThemeStyle">
+        <item name="dialogPreferenceStyle">@style/mesa_RC_SeslDialogPreferenceStyle</item>
+    </style>
+
+    <style name="mesa_RC_SeslDialogPreferenceStyle" parent="@style/mesa_SeslDialogPreferenceStyle">
+        <item name="android:positiveButtonText">@string/mesa_done</item>
+        <item name="android:negativeButtonText">@string/mesa_cancel</item>
+        <item name="positiveButtonText">@string/mesa_done</item>
+        <item name="negativeButtonText">@string/mesa_cancel</item>
+    </style>
+
     <!-- Sesl TabLayout-->
     <style name="mesa_RC_SeslTabLayoutStyle" parent="@style/mesa_SeslTabLayoutStyle">
-        <item name="tabIndicatorColor">?colorPrimary</item>
-        <item name="tabSelectedTextColor">?colorPrimary</item>
+        <item name="tabIndicatorColor">?colorPrimaryDark</item>
+        <item name="tabSelectedTextColor">?colorPrimaryDark</item>
         <item name="tabMode">scrollable</item>
         <item name="tabGravity">center</item>
     </style>

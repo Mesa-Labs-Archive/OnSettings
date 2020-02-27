@@ -23,7 +23,6 @@ public class AboutActivity extends BaseAboutActivity {
 
     @Override
     protected boolean getIsAppUpdateable() {
-        // temp
-        return false;
+        return true;
     }
 }

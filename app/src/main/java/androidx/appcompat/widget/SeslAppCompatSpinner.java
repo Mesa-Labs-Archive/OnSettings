@@ -37,7 +37,7 @@ import androidx.core.view.TintableBackgroundView;
 import androidx.core.view.ViewCompat;
 
 import com.mesalabs.on.romcontrol.R;
-import com.mesalabs.cerberus.utils.LogUtils;
+import com.mesalabs.on.romcontrol.utils.LogUtils;
 import com.samsung.android.ui.app.SeslAlertDialog;
 
 /*
