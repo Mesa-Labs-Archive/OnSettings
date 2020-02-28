@@ -93,12 +93,14 @@ public class AppDownload extends AsyncTask<Void, Integer, String> {
             cursor.moveToFirst();
 
             try {
-                if (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)) != DownloadManager.STATUS_RUNNING) {
-                    mIsRunning = false;
-                } else if (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)) == DownloadManager.STATUS_SUCCESSFUL) {
+                int status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
+
+                if (status == DownloadManager.STATUS_SUCCESSFUL) {
                     downloadFileUrl = cursor.getString(cursor.getColumnIndex(DownloadManager.COLUMN_LOCAL_URI));
                     mIsRunning = false;
-                } else if (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)) == DownloadManager.STATUS_FAILED) {
+                } else if (status == DownloadManager.STATUS_FAILED) {
+                    mIsRunning = false;
+                } else if (status != DownloadManager.STATUS_RUNNING) {
                     mIsRunning = false;
                 }
 
