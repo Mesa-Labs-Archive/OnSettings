@@ -93,6 +93,7 @@ public class SeslAppCompatSpinner extends Spinner implements TintableBackgroundV
         this(context, attrs, defStyleAttr, mode, null);
     }
 
+    @SuppressLint("RestrictedApi")
     public SeslAppCompatSpinner(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int mode, Resources.Theme popupTheme) {
         super(context, attrs, defStyleAttr);
 
@@ -163,7 +164,7 @@ public class SeslAppCompatSpinner extends Spinner implements TintableBackgroundV
         final CharSequence[] entries = a.getTextArray(R.styleable.Spinner_android_entries);
         if (entries != null) {
             final ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_item, entries);
-            adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+            adapter.setDropDownViewResource(R.layout.sesl_simple_spinner_dropdown_item);
             setAdapter(adapter);
         }
 
@@ -290,6 +291,7 @@ public class SeslAppCompatSpinner extends Spinner implements TintableBackgroundV
         }
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (mForwardingListener != null && mForwardingListener.onTouch(this, event)) {
@@ -777,6 +779,7 @@ public class SeslAppCompatSpinner extends Spinner implements TintableBackgroundV
             mHintText = hintText;
         }
 
+        @SuppressLint("RestrictedApi")
         void computeContentWidth() {
             final Drawable background = getBackground();
             int hOffset = 0;
