@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
 
     <application android:name="com.mesalabs.on.romcontrol.OnSettingsApp" android:allowBackup="false" android:hardwareAccelerated="true" android:persistent="true" android:icon="@mipmap/ic_launcher" android:label="@string/mesa_onsettings" android:supportsRtl="true" android:theme="@style/mesa_AppStyle.DayNight.NoActionBar">
 

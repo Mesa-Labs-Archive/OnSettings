@@ -67,8 +67,7 @@ public class AppUpdateUtils {
             String fileName = mAppPackageName + "-" + mAppData.getVersionNumber();
 
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(mAppData.getDownloadLink()));
-            request.setTitle(mActivity.getString(R.string.mesa_downloading));
-            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
             fileName = fileName + ".apk";
             request.setDestinationInExternalFilesDir(mActivity, DOWNLOAD_DIR, fileName);
 
