@@ -822,30 +822,25 @@ public class SeslAppCompatSpinner extends Spinner implements TintableBackgroundV
             setInputMethodMode(ListPopupWindow.INPUT_METHOD_NOT_NEEDED);
             super.show();
             final ListView listView = getListView();
-            listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                 listView.setTextDirection(textDirection);
                 listView.setTextAlignment(textAlignment);
             }
-            setSelection(SeslAppCompatSpinner.this.getSelectedItemPosition());
 
             if (wasShowing) {
                 return;
             }
 
+            listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+            setSelection(SeslAppCompatSpinner.this.getSelectedItemPosition());
             final ViewTreeObserver vto = getViewTreeObserver();
             if (vto != null) {
                 final ViewTreeObserver.OnGlobalLayoutListener layoutListener
                         = new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-                        if (!isVisibleToUser(SeslAppCompatSpinner.this)) {
-                            dismiss();
-                        } else {
-                            computeContentWidth();
-
-                            DropdownPopup.super.show();
-                        }
+                        computeContentWidth();
+                        DropdownPopup.super.show();
                     }
                 };
                 vto.addOnGlobalLayoutListener(layoutListener);
