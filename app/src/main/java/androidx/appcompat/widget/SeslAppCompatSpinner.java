@@ -748,6 +748,7 @@ public class SeslAppCompatSpinner extends Spinner implements TintableBackgroundV
             super(context, attrs, defStyleAttr);
 
             setAnchorView(SeslAppCompatSpinner.this);
+            setAnimationStyle(R.style.mesa_ListPopupAnimStyle);
             setModal(true);
             setPromptPosition(POSITION_PROMPT_ABOVE);
 

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="mesa_onsettings">On Settings</string>
+
+    <string name="mesa_about_app">About On Settings</string>
 </resources>

@@ -138,7 +138,7 @@ public class SeslColorPickerDialogFragment extends AppCompatDialogFragment imple
 
         this.mAlertDialog = new SeslColorPickerDialogFragment.ColorPickerDialog(var7, var5);
         this.mAlertDialog.setButton(-1, var6.getString(R.string.sesl_picker_done), this);
-        this.mAlertDialog.setButton(-2, var6.getString(android.R.string.cancel), this);
+        this.mAlertDialog.setButton(-2, var6.getString(R.string.mesa_cancel), this);
         return this.mAlertDialog;
     }
 

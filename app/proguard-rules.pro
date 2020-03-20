@@ -22,3 +22,6 @@
 
 # SeslAppBarLayout
 -keep class com.samsung.android.ui.appbar.** { *; }
+
+# On Settings
+-keep class com.mesalabs.on.romcontrol.fragment.rc.** { *; }

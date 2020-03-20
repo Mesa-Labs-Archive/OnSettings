@@ -20,7 +20,7 @@
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:background="?round_and_bgColor">
-            <include layout="@layout/mesa_appbar_layout"/>
+            <include layout="@layout/mesa_view_appbar_layout"/>
             <FrameLayout
                 android:id="@+id/mesa_fragmentcontainer_mainactivity"
                 android:layout_width="fill_parent"

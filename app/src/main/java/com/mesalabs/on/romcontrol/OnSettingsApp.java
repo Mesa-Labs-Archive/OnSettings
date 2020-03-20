@@ -28,7 +28,7 @@ public class OnSettingsApp extends Application {
     }
 
     public static String getAppName() {
-        return mAppInstance.getString(R.string.mesa_cerberuscore);
+        return mAppInstance.getString(R.string.mesa_onsettings);
     }
 
     public static String getAppPackageName() {

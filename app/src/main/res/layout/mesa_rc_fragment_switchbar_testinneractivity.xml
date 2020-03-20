@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mesalabs.cerberus.ui.widget.RoundNestedScrollView
+    android:background="?round_and_bgColor"
+    android:scrollbarStyle="outsideOverlay"
+    android:scrollbars="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="1.0px"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    app:cornersStroke="false"
+    app:roundedCorners="top_left|top_right"
+    app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- CUT HERE FOR LAYOUTPREFERENCE -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:descendantFocusability="afterDescendants">
+        <com.mesalabs.cerberus.ui.widget.RoundFrameLayout
+            android:id="@+id/mesa_container_baseactivity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mesa_layoutpref_help_image_bg"
+            app:cornersStroke="true">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mesa_layoutpref_help_image_margin"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/sec_easy_img_preview_star" />
+        </com.mesalabs.cerberus.ui.widget.RoundFrameLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sesl_list_item_padding_horizontal"
+            android:layout_marginEnd="@dimen/sesl_list_item_padding_horizontal"
+            android:layout_marginTop="@dimen/sesl_list_divider_inset"
+            android:layout_marginBottom="@dimen/sesl_list_divider_inset"
+            android:textAppearance="?android:textAppearanceListItem"
+            android:textSize="15.0sp"
+            android:textColor="@color/mesa_widget_body_text_color"
+            android:lineSpacingExtra="4.0sp"
+            android:text="You like the preview here? It's kanged directly from Samsung SecSettings!"/>
+    </LinearLayout>
+    <!-- CUT HERE FOR LAYOUTPREFERENCE -->
+</com.mesalabs.cerberus.ui.widget.RoundNestedScrollView>

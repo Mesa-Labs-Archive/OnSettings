@@ -3,6 +3,8 @@ package com.mesalabs.on.romcontrol.utils;
 import android.content.ContentResolver;
 import android.provider.Settings;
 
+import com.mesalabs.cerberus.root.utils.RootUtils;
+
 /*
  * On Settings
  *
@@ -44,15 +46,30 @@ public class SettingsUtils {
     }
 
     public static void putGlobalBool(ContentResolver resolver, String key, boolean value) {
-        Settings.Global.putInt(resolver, key, value ? 1 : 0);
+        try {
+            Settings.Global.putInt(resolver, key, value ? 1 : 0);
+        } catch (IllegalArgumentException e) {
+            int i = value ? 1 : 0;
+            RootUtils.getSU().runCommand("settings put global " + key + i);
+        }
     }
 
     public static void putSecureBool(ContentResolver resolver, String key, boolean value) {
-        Settings.Secure.putInt(resolver, key, value ? 1 : 0);
+        try {
+            Settings.Secure.putInt(resolver, key, value ? 1 : 0);
+        } catch (IllegalArgumentException e) {
+            int i = value ? 1 : 0;
+            RootUtils.getSU().runCommand("settings put secure " + key + i);
+        }
     }
 
     public static void putSystemBool(ContentResolver resolver, String key, boolean value) {
-        Settings.System.putInt(resolver, key, value ? 1 : 0);
+        try {
+            Settings.System.putInt(resolver, key, value ? 1 : 0);
+        } catch (IllegalArgumentException e) {
+            int i = value ? 1 : 0;
+            RootUtils.getSU().runCommand("settings put system " + key + i);
+        }
     }
 
     // float
@@ -81,15 +98,27 @@ public class SettingsUtils {
     }
 
     public static void putGlobalFloat(ContentResolver resolver, String key, float value) {
-        Settings.Global.putFloat(resolver, key, value);
+        try {
+            Settings.Global.putFloat(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put global " + key + " " + value);
+        }
     }
 
     public static void putSecureFloat(ContentResolver resolver, String key, float value) {
-        Settings.Secure.putFloat(resolver, key, value);
+        try {
+            Settings.Secure.putFloat(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put secure " + key + " " + value);
+        }
     }
 
     public static void putSystemFloat(ContentResolver resolver, String key, float value) {
-        Settings.System.putFloat(resolver, key, value);
+        try {
+            Settings.System.putFloat(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put system " + key + " " + value);
+        }
     }
 
     // int
@@ -118,15 +147,27 @@ public class SettingsUtils {
     }
 
     public static void putGlobalInt(ContentResolver resolver, String key, int value) {
-        Settings.Global.putInt(resolver, key, value);
+        try {
+            Settings.Global.putInt(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put global " + key + " " + value);
+        }
     }
 
     public static void putSecureInt(ContentResolver resolver, String key, int value) {
-        Settings.Secure.putInt(resolver, key, value);
+        try {
+            Settings.Secure.putInt(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put secure " + key + " " + value);
+        }
     }
 
     public static void putSystemInt(ContentResolver resolver, String key, int value) {
-        Settings.System.putInt(resolver, key, value);
+        try {
+            Settings.System.putInt(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put system " + key + " " + value);
+        }
     }
 
     // long
@@ -155,15 +196,27 @@ public class SettingsUtils {
     }
 
     public static void putGlobalLong(ContentResolver resolver, String key, long value) {
-        Settings.Global.putLong(resolver, key, value);
+        try {
+            Settings.Global.putLong(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put global " + key + " " + value);
+        }
     }
 
     public static void putSecureLong(ContentResolver resolver, String key, long value) {
-        Settings.Secure.putLong(resolver, key, value);
+        try {
+            Settings.Secure.putLong(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put secure " + key + " " + value);
+        }
     }
 
     public static void putSystemLong(ContentResolver resolver, String key, long value) {
-        Settings.System.putLong(resolver, key, value);
+        try {
+            Settings.System.putLong(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put system " + key + " " + value);
+        }
     }
 
     // string
@@ -180,15 +233,27 @@ public class SettingsUtils {
     }
 
     public static void putGlobalString(ContentResolver resolver, String key, String value) {
-        Settings.Global.putString(resolver, key, value);
+        try {
+            Settings.Global.putString(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put global " + key + " " + value);
+        }
     }
 
     public static void putSecureString(ContentResolver resolver, String key, String value) {
-        Settings.Secure.putString(resolver, key, value);
+        try {
+            Settings.Secure.putString(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put secure " + key + " " + value);
+        }
     }
 
     public static void putSystemString(ContentResolver resolver, String key, String value) {
-        Settings.System.putString(resolver, key, value);
+        try {
+            Settings.System.putString(resolver, key, value);
+        } catch (IllegalArgumentException e) {
+            RootUtils.getSU().runCommand("settings put system " + key + " " + value);
+        }
     }
 
     private static boolean intToBoolean(int i) {
