@@ -6,4 +6,13 @@
     <declare-styleable name="MesaInsetPreferenceCategory">
         <attr name="height" format="dimension" />
     </declare-styleable>
+    <declare-styleable name="MesaSeekBarPreference">
+        <attr name="min" />
+        <attr name="max" format="integer" />
+        <attr name="units" format="string" />
+        <attr name="seekBarIncrement" />
+        <attr name="adjustable" />
+        <attr name="showSeekBarValue" />
+        <attr name="updatesContinuously" />
+    </declare-styleable>
 </resources>
