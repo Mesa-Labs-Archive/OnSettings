@@ -1,4 +1,4 @@
-package com.mesalabs.cerberus.ui.preference;
+package com.mesalabs.on.romcontrol.ui.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -12,7 +12,7 @@ import com.samsung.android.ui.preference.PreferenceViewHolder;
 import com.samsung.android.ui.preference.SeslPreference;
 
 /*
- * Cerberus Core App
+ * On Settings
  *
  * Coded by BlackMesa @2020
  *
@@ -21,27 +21,24 @@ import com.samsung.android.ui.preference.SeslPreference;
  * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * ULTRA-MEGA-PRIVATE SOURCE CODE. SHARING TO DEVKINGS TEAM
- * EXTERNALS IS PROHIBITED AND WILL BE PUNISHED WITH ANAL ABUSE.
  */
 
-public class TipsCardViewPreference extends SeslPreference {
+public class MesaTipsCardViewPreference extends SeslPreference {
     private TipsCardListener mTipsCardListener;
     private int mTextColor;
 
-    public TipsCardViewPreference(Context context) {
+    public MesaTipsCardViewPreference(Context context) {
         this(context, null);
     }
 
-    public TipsCardViewPreference(Context context, AttributeSet attrs) {
+    public MesaTipsCardViewPreference(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public TipsCardViewPreference(Context context, AttributeSet attrs, int defStyleAttr) {
+    public MesaTipsCardViewPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setSelectable(false);
         setLayoutResource(R.layout.mesa_preference_tipcardviewpref_layout);
-
         mTextColor = ContextCompat.getColor(context, R.color.sesl_primary_text_color_dark);
     }
 

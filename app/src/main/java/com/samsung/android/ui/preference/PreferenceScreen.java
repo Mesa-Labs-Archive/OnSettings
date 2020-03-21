@@ -22,7 +22,7 @@ import com.mesalabs.on.romcontrol.R;
  * EXTERNALS IS PROHIBITED AND WILL BE PUNISHED WITH ANAL ABUSE.
  */
 
-public final class PreferenceScreen extends SeslPreferenceGroup {
+public class PreferenceScreen extends SeslPreferenceGroup {
     private boolean mShouldUseGeneratedIds = true;
 
     public PreferenceScreen(Context context, AttributeSet attrs) {

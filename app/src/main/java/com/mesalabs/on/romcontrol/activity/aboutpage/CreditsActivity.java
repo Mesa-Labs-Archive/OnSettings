@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.mesalabs.cerberus.base.BaseAppBarActivity;
 import com.mesalabs.cerberus.ui.callback.OnSingleClickListener;
 import com.mesalabs.on.romcontrol.R;
-
-import com.samsung.android.ui.preference.SeslPreferenceFragmentCompat;
+import com.mesalabs.on.romcontrol.fragment.aboutpage.CreditsFragment;
 
 /*
  * On Settings
@@ -26,7 +26,7 @@ import com.samsung.android.ui.preference.SeslPreferenceFragmentCompat;
  */
 
 public class CreditsActivity extends BaseAppBarActivity {
-    private FragmentManager mFragmentManager;
+    private Fragment mFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,30 +42,34 @@ public class CreditsActivity extends BaseAppBarActivity {
             }
         });
 
-        mFragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = mFragmentManager.beginTransaction();
-        transaction.add(R.id.mesa_fragmentcontainer_creditsactivity, new CreditsFragment(), "root");
-        transaction.commit();
-
-        mFragmentManager.executePendingTransactions();
+        inflateFragment();
 
         TextView desc = findViewById(R.id.mesa_textview_creditsactivity);
         desc.setPadding(desc.getPaddingLeft(), desc.getPaddingTop() - appBar.getAppBarLayout().getPaddingBottom(), desc.getPaddingRight(), desc.getPaddingBottom());
 
     }
 
+    private void inflateFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        Fragment fragment = fragmentManager.findFragmentByTag("root");
+        if (mFragment != null) {
+            transaction.hide(mFragment);
+        }
+        if (fragment != null) {
+            mFragment = fragment;
+            transaction.show(fragment);
+        } else {
+            mFragment = new CreditsFragment();
+            transaction.add(R.id.mesa_fragmentcontainer_creditsactivity, mFragment, "root");
+        }
+        transaction.commit();
+        fragmentManager.executePendingTransactions();
+    }
+
     @Override
     protected boolean getIsAppBarExpanded() {
         return false;
-    }
-
-
-    public static class CreditsFragment extends SeslPreferenceFragmentCompat {
-        @Override
-        public void onCreatePreferences(Bundle bundle, String str) {
-            addPreferencesFromResource(R.xml.mesa_creditspref_creditsactivity);
-            seslSetRoundedCornerType(SESL_ROUNDED_CORNER_TYPE_STROKE);
-        }
     }
 
 }

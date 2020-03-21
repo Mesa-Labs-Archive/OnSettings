@@ -67,12 +67,32 @@ public abstract class SeslDialogPreference extends SeslPreference {
         return mDialogIcon;
     }
 
+    public void setPositiveButtonText(CharSequence positiveButtonText) {
+        mPositiveButtonText = positiveButtonText;
+    }
+
+    public void setPositiveButtonText(int positiveButtonTextResId) {
+        setPositiveButtonText(getContext().getString(positiveButtonTextResId));
+    }
+
     public CharSequence getPositiveButtonText() {
         return mPositiveButtonText;
     }
 
+    public void setNegativeButtonText(CharSequence negativeButtonText) {
+        mNegativeButtonText = negativeButtonText;
+    }
+
+    public void setNegativeButtonText(int negativeButtonTextResId) {
+        setNegativeButtonText(getContext().getString(negativeButtonTextResId));
+    }
+
     public CharSequence getNegativeButtonText() {
         return mNegativeButtonText;
+    }
+
+    public void setDialogLayoutResource(int dialogLayoutResId) {
+        mDialogLayoutResId = dialogLayoutResId;
     }
 
     public int getDialogLayoutResource() {

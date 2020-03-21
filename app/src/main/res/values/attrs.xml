@@ -79,13 +79,6 @@
         <attr name="seslSwitchBarTextColor" format="color" />
     </declare-styleable>
 
-    <declare-styleable name="ColorPickerPreference">
-        <attr name="showAlphaSlider" format="boolean" />
-    </declare-styleable>
-    <declare-styleable name="InsetPreferenceCategory">
-        <attr name="height" format="dimension" />
-    </declare-styleable>
-
     <declare-styleable name="SeslAppBarLayout">
         <attr name="elevation"/>
         <attr name="android:background"/>

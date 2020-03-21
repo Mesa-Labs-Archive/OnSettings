@@ -1,4 +1,4 @@
-package com.mesalabs.cerberus.ui.preference;
+package com.mesalabs.on.romcontrol.ui.preference;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,7 +10,7 @@ import com.samsung.android.ui.preference.PreferenceCategory;
 import com.samsung.android.ui.preference.PreferenceViewHolder;
 
 /*
- * Cerberus Core App
+ * On Settings
  *
  * Coded by BlackMesa @2020
  *
@@ -19,25 +19,22 @@ import com.samsung.android.ui.preference.PreferenceViewHolder;
  * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * ULTRA-MEGA-PRIVATE SOURCE CODE. SHARING TO DEVKINGS TEAM
- * EXTERNALS IS PROHIBITED AND WILL BE PUNISHED WITH ANAL ABUSE.
  */
 
-public class InsetPreferenceCategory extends PreferenceCategory {
+public class MesaInsetPreferenceCategory extends PreferenceCategory {
     private int mHeight;
 
-    public InsetPreferenceCategory(Context context) {
+    public MesaInsetPreferenceCategory(Context context) {
         this(context, null);
     }
 
-    public InsetPreferenceCategory(Context context, AttributeSet attrs) {
+    public MesaInsetPreferenceCategory(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         mHeight = (int) context.getResources().getDimension(R.dimen.mesa_widget_inset_category_height);
         if (attrs != null) {
-            TypedArray styledAttrs = context.obtainStyledAttributes(attrs, R.styleable.InsetPreferenceCategory);
-            mHeight = styledAttrs.getDimensionPixelSize(R.styleable.InsetPreferenceCategory_height, mHeight);
+            TypedArray styledAttrs = context.obtainStyledAttributes(attrs, R.styleable.MesaInsetPreferenceCategory);
+            mHeight = styledAttrs.getDimensionPixelSize(R.styleable.MesaInsetPreferenceCategory_height, mHeight);
             styledAttrs.recycle();
 
             TypedArray categoryAttrs = context.obtainStyledAttributes(attrs, R.styleable.SeslPreferenceCategory);

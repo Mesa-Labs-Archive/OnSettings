@@ -9,6 +9,12 @@ import com.mesalabs.on.romcontrol.base.BasePreferenceTabFragment;
 
 public class SettingsTestFragment2 extends BasePreferenceTabFragment {
     @Override
+    public void onActivityCreated(Bundle bundle) {
+        super.onActivityCreated(bundle);
+        getListView().seslSetLastItemOutlineStrokeEnabled(true);
+    }
+
+    @Override
     public void onCreatePreferences(Bundle bundle, String str) {
         addPreferencesFromResource(R.xml.mesa_testsettingsfragment2);
         seslSetRoundedCornerType(SESL_ROUNDED_CORNER_TYPE_STROKE);

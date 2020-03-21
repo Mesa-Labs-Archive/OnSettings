@@ -1,4 +1,4 @@
-package com.mesalabs.cerberus.ui.preference;
+package com.mesalabs.on.romcontrol.ui.preference;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -16,7 +16,7 @@ import com.samsung.android.ui.preference.PreferenceViewHolder;
 import com.samsung.android.ui.preference.SeslPreference;
 
 /*
- * Cerberus Core App
+ * On Settings
  *
  * Coded by BlackMesa @2020
  *
@@ -25,12 +25,9 @@ import com.samsung.android.ui.preference.SeslPreference;
  * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * ULTRA-MEGA-PRIVATE SOURCE CODE. SHARING TO DEVKINGS TEAM
- * EXTERNALS IS PROHIBITED AND WILL BE PUNISHED WITH ANAL ABUSE.
  */
 
-public class LayoutPreference extends SeslPreference {
+public class MesaLayoutPreference extends SeslPreference {
     private boolean mAllowDividerAbove;
     private boolean mAllowDividerBelow;
     private final View.OnClickListener mClickListener;
@@ -38,7 +35,7 @@ public class LayoutPreference extends SeslPreference {
     private boolean mIsRelativeLinkView;
     View mRootView;
 
-    public LayoutPreference(Context context, AttributeSet attrs) {
+    public MesaLayoutPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         mClickListener = new View.OnClickListener() {
@@ -52,7 +49,7 @@ public class LayoutPreference extends SeslPreference {
         init(context, attrs, 0);
     }
 
-    public LayoutPreference(Context context, AttributeSet attrs, int defStyleAttr) {
+    public MesaLayoutPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         mClickListener = new View.OnClickListener() {
@@ -66,11 +63,11 @@ public class LayoutPreference extends SeslPreference {
         init(context, attrs, defStyleAttr);
     }
 
-    public LayoutPreference(Context context, int resource) {
+    public MesaLayoutPreference(Context context, int resource) {
         this(context, LayoutInflater.from(context).inflate(resource, null, false));
     }
 
-    public LayoutPreference(Context context, View view, boolean isRelativeLinkView) {
+    public MesaLayoutPreference(Context context, View view, boolean isRelativeLinkView) {
         super(context, null);
 
         mClickListener = new View.OnClickListener() {
@@ -85,7 +82,7 @@ public class LayoutPreference extends SeslPreference {
         mIsRelativeLinkView = isRelativeLinkView;
     }
 
-    public LayoutPreference(Context context, View view, int descendantFocusability) {
+    public MesaLayoutPreference(Context context, View view, int descendantFocusability) {
         super(context, null);
 
         mClickListener = new View.OnClickListener() {
@@ -100,7 +97,7 @@ public class LayoutPreference extends SeslPreference {
         mDescendantFocusability = descendantFocusability;
     }
 
-    public LayoutPreference(Context context, View view) {
+    public MesaLayoutPreference(Context context, View view) {
         super(context, null);
 
         mClickListener = new View.OnClickListener() {

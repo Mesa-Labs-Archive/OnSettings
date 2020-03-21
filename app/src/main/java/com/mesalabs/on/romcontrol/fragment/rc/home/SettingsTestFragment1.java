@@ -2,14 +2,14 @@ package com.mesalabs.on.romcontrol.fragment.rc.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.mesalabs.cerberus.ui.preference.ColorPickerPreference;
-import com.mesalabs.cerberus.ui.preference.TipsCardViewPreference;
+import com.mesalabs.on.romcontrol.ui.preference.MesaColorPickerPreference;
+import com.mesalabs.on.romcontrol.ui.preference.MesaTipsCardViewPreference;
 import com.mesalabs.cerberus.utils.CerberusException;
-import com.mesalabs.on.romcontrol.utils.LogUtils;
 import com.mesalabs.cerberus.utils.SharedPreferencesUtils;
 import com.mesalabs.on.romcontrol.R;
 import com.mesalabs.on.romcontrol.activity.rc.home.switchbar_testInnerActivity;
@@ -24,29 +24,35 @@ import com.samsung.android.ui.preference.SeslSwitchPreferenceScreen;
 public class SettingsTestFragment1 extends BasePreferenceTabFragment implements
         SeslPreference.OnPreferenceChangeListener,
         SeslPreference.OnPreferenceClickListener {
+    private long mLastClickTime = 0L;
+
+    @Override
+    public void onActivityCreated(Bundle bundle) {
+        super.onActivityCreated(bundle);
+        getListView().seslSetLastItemOutlineStrokeEnabled(true);
+    }
 
     @Override
     public void onCreatePreferences(Bundle bundle, String str) {
         addPreferencesFromResource(R.xml.mesa_testsettingsfragment1);
+        seslSetRoundedCornerType(SESL_ROUNDED_CORNER_TYPE_STROKE);
     }
 
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
-        final TipsCardViewPreference tip0 = (TipsCardViewPreference) findPreference("tip0");
+        final MesaTipsCardViewPreference tip0 = (MesaTipsCardViewPreference) findPreference("tip0");
         final PreferenceCategory padding = (PreferenceCategory) findPreference("padding");
         final SeslPreferenceGroup parent = getParent(getPreferenceScreen(), tip0);
         if (parent == null)
             throw new CerberusException("Couldn't find preference");
 
-        SharedPreferencesUtils.getInstance().put("istipshown", false); /* temp */
-
         if (SharedPreferencesUtils.getInstance().getBoolean("istipshown", false)) {
             parent.removePreference(tip0);
             parent.removePreference(padding);
         } else {
-            tip0.setTipsCardListener(new TipsCardViewPreference.TipsCardListener() {
+            tip0.setTipsCardListener(new MesaTipsCardViewPreference.TipsCardListener() {
                 @Override
                 public void onCancelClicked(View view) {
                     parent.removePreference(tip0);
@@ -69,11 +75,8 @@ public class SettingsTestFragment1 extends BasePreferenceTabFragment implements
         SeslSeekBarPreference key81 = (SeslSeekBarPreference) findPreference("key81");
         key81.setValue(SharedPreferencesUtils.getInstance().getInt("key81", 0));
 
-        ColorPickerPreference color1 = (ColorPickerPreference) findPreference("color1");
+        MesaColorPickerPreference color1 = (MesaColorPickerPreference) findPreference("color1");
         color1.setOnPreferenceChangeListener(this);
-
-        SeslPreference key9 = findPreference("key9");
-        key9.setOnPreferenceClickListener(this);
 
     }
 
@@ -98,9 +101,6 @@ public class SettingsTestFragment1 extends BasePreferenceTabFragment implements
         }
         if (preference.getKey().equals("color1")) {
             SettingsUtils.putSystemInt(getContext().getContentResolver(), "mesa_test_colorkey", (int) newValue);
-            int color = SettingsUtils.getSystemInt(getContext().getContentResolver(), "mesa_test_colorkey");
-            //Toast.makeText(mContext, "new value = " + color, Toast.LENGTH_SHORT).show();
-            LogUtils.e("STF1", "new value = " + color);
             return true;
         }
 
@@ -109,13 +109,15 @@ public class SettingsTestFragment1 extends BasePreferenceTabFragment implements
 
     @Override
     public boolean onPreferenceClick(SeslPreference preference) {
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 600L) {
+            return false;
+        }
+        mLastClickTime = SystemClock.elapsedRealtime();
+
+
         if (preference.getKey().equals("switchbar_test")) {
             Toast.makeText(mContext, "switchbar_test pressed", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(mContext, switchbar_testInnerActivity.class));
-            return true;
-        }
-        if (preference.getKey().equals("key9")) {
-            Toast.makeText(mContext, "key9 pressed", Toast.LENGTH_SHORT).show();
             return true;
         }
 

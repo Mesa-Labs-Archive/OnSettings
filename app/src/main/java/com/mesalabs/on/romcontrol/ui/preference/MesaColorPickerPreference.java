@@ -1,4 +1,4 @@
-package com.mesalabs.cerberus.ui.preference;
+package com.mesalabs.on.romcontrol.ui.preference;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -19,7 +19,7 @@ import com.samsung.android.ui.preference.PreferenceViewHolder;
 import com.samsung.android.ui.preference.SeslPreference;
 
 /*
- * Cerberus Core App
+ * On Settings
  *
  * Coded by BlackMesa @2020
  *
@@ -28,12 +28,9 @@ import com.samsung.android.ui.preference.SeslPreference;
  * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * ULTRA-MEGA-PRIVATE SOURCE CODE. SHARING TO DEVKINGS TEAM
- * EXTERNALS IS PROHIBITED AND WILL BE PUNISHED WITH ANAL ABUSE.
  */
 
-public class ColorPickerPreference extends SeslPreference implements SeslPreference.OnPreferenceClickListener, SeslColorPickerDialog.OnColorSetListener {
+public class MesaColorPickerPreference extends SeslPreference implements SeslPreference.OnPreferenceClickListener, SeslColorPickerDialog.OnColorSetListener {
     PreferenceViewHolder mViewHolder;
     SeslColorPickerDialog mDialog;
     SeslPreferenceImageView mPreview;
@@ -43,16 +40,16 @@ public class ColorPickerPreference extends SeslPreference implements SeslPrefere
     private boolean mIsNightMode;
     private ArrayList<Integer> mUsedColors = new ArrayList();
 
-    public ColorPickerPreference(Context context) {
+    public MesaColorPickerPreference(Context context) {
         this(context, null);
     }
 
-    public ColorPickerPreference(Context context, AttributeSet attrs) {
+    public MesaColorPickerPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public ColorPickerPreference(Context context, AttributeSet attrs, int defStyleAttr) {
+    public MesaColorPickerPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
@@ -81,8 +78,8 @@ public class ColorPickerPreference extends SeslPreference implements SeslPrefere
 
         mIsNightMode = Utils.isNightMode(context);
 
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ColorPickerPreference);
-        mAlphaSliderEnabled = a.getBoolean(R.styleable.ColorPickerPreference_showAlphaSlider, false);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MesaColorPickerPreference);
+        mAlphaSliderEnabled = a.getBoolean(R.styleable.MesaColorPickerPreference_showAlphaSlider, false);
         a.recycle();
     }
 

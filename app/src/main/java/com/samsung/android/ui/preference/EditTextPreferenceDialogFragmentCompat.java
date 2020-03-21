@@ -1,6 +1,7 @@
 package com.samsung.android.ui.preference;
 
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
 
@@ -59,6 +60,9 @@ public class EditTextPreferenceDialogFragmentCompat extends PreferenceDialogFrag
         }
 
         mEditText.setText(mText);
+
+        mEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
+        mEditText.requestFocus();
     }
 
     private EditTextPreference getEditTextPreference() {
