@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="mesa_creditspage_lib_icon">
+        <item>@drawable/mesa_credits_androidx_icon</item>
+        <item>@drawable/mesa_credits_gmaterial_icon</item>
+        <item>@drawable/mesa_credits_oneui_icon</item>
+    </array>
+    <string-array name="mesa_creditspage_lib_title">
+        <item>@string/mesa_credits_androidx_title</item>
+        <item>@string/mesa_credits_gmaterial_title</item>
+        <item>@string/mesa_credits_oneui_title</item>
+    </string-array>
+    <string-array name="mesa_creditspage_lib_desc">
+        <item>@string/mesa_credits_androidx_description</item>
+        <item>@string/mesa_credits_gmaterial_description</item>
+        <item>@string/mesa_credits_oneui_description</item>
+    </string-array>
+    <string-array name="mesa_creditspage_lib_web">
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+</resources>
