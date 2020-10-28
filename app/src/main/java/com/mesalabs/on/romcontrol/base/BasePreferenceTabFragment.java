@@ -1,11 +1,15 @@
 package com.mesalabs.on.romcontrol.base;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
 
 import com.mesalabs.cerberus.utils.ViewUtils;
+import com.mesalabs.on.romcontrol.R;
 import com.samsung.android.ui.preference.SeslPreference;
 import com.samsung.android.ui.preference.SeslPreferenceFragmentCompat;
 import com.samsung.android.ui.preference.SeslPreferenceGroup;
@@ -66,6 +70,21 @@ public abstract class BasePreferenceTabFragment extends SeslPreferenceFragmentCo
         }
 
         return null;
+    }
+
+    protected ColorStateList getColoredSummaryColor() {
+        TypedValue colorPrimaryDark = new TypedValue();
+        getContext().getTheme().resolveAttribute(R.attr.colorPrimaryDark, colorPrimaryDark, true);
+
+        int[][] states = new int[][] {
+                new int[] { android.R.attr.state_enabled},
+                new int[] {-android.R.attr.state_enabled}
+        };
+        int[] colors = new int[] {
+                Color.argb(0xff, Color.red(colorPrimaryDark.data), Color.green(colorPrimaryDark.data), Color.blue(colorPrimaryDark.data)),
+                Color.argb(0x4d, Color.red(colorPrimaryDark.data), Color.green(colorPrimaryDark.data), Color.blue(colorPrimaryDark.data))
+        };
+        return new ColorStateList(states, colors);
     }
 
     public void onMultiWindowModeChanged(boolean isMultiWindowMode) { }

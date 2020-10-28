@@ -55,7 +55,6 @@
         <item name="tabGravity">center</item>
     </style>
     <style name="mesa_RC_SeslTabLayoutStyle.Light" parent="@style/mesa_RC_SeslTabLayoutStyle">
-        <item name="tabBackground">@drawable/sesl_tablayout_tab_background</item>
         <item name="tabTextAppearance">@style/mesa_SeslTabTextStyle.Light</item>
     </style>
 </resources>

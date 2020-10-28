@@ -12,8 +12,7 @@
         android:layout_weight="1.0"
         android:paddingBottom="1.0px"
         android:background="?round_and_bgColor"
-        app:roundedCorners="bottom_left|bottom_right"
-        app:cornersStroke="false">
+        app:roundedCorners="bottom_left|bottom_right">
         <com.samsung.android.ui.coordinatorlayout.widget.SeslCoordinatorLayout
             android:id="@+id/mesa_coordinatorlayout_mainactivity"
             android:layout_width="fill_parent"
@@ -22,11 +21,18 @@
             android:background="?round_and_bgColor">
             <include layout="@layout/mesa_view_appbar_layout"/>
             <FrameLayout
-                android:id="@+id/mesa_fragmentcontainer_mainactivity"
+                android:id="@+id/mesa_container_mainactivity"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="?cardBgColor"
-                app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior" />
+                android:background="?round_and_bgColor"
+                app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior">
+                <FrameLayout
+                    android:id="@+id/mesa_fragmentcontainer_mainactivity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="?cardBgColor"
+                    app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior"/>
+            </FrameLayout>
         </com.samsung.android.ui.coordinatorlayout.widget.SeslCoordinatorLayout>
     </com.mesalabs.cerberus.ui.widget.RoundFrameLayout>
     <RelativeLayout

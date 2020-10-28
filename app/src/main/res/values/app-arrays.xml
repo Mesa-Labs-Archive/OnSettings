@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="mesa_tab_tag_mainactivity">
-        <item>null</item>
+        <item>sett1</item>
+        <item>sett2</item>
+        <item>sett3</item>
+        <item>sett4</item>
+        <item>sett5</item>
+        <item>sett6</item>
     </string-array>
     <string-array name="mesa_tab_name_mainactivity">
-        <item>null</item>
+        <item>Status bar</item>
+        <item>Lock screen</item>
+        <item>Frameworks</item>
+        <item>System UI</item>
+        <item>Quick panel</item>
+        <item>Notifications</item>
     </string-array>
     <string-array name="mesa_tab_class_mainactivity">
-        <item>null</item>
+        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment1</item>
+        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+    </string-array>
+
+
+    <string-array name="mesa_testpref_names_array">
+        <item>Aqua</item>
+        <item>Azure</item>
+        <item>Beige</item>
+    </string-array>
+    <string-array name="mesa_testpref_values_array">
+        <item>#00FFFF</item>
+        <item>#F0FFFF</item>
+        <item>#F5F5DC</item>
     </string-array>
 </resources>

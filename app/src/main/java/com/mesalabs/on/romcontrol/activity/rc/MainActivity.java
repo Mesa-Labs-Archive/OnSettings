@@ -82,6 +82,9 @@ public class MainActivity extends BaseAppBarActivity {
         appBar.initAppBar(false);
         appBar.setTitleText("On Settings");
 
+        ViewGroup preferenceContainer = findViewById(R.id.mesa_container_mainactivity);
+        ViewUtils.updateListBothSideMargin(this, preferenceContainer);
+
         initMoreMenuButton();
 
         createTabs();
@@ -113,7 +116,7 @@ public class MainActivity extends BaseAppBarActivity {
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
 
-        ViewGroup preferenceContainer = findViewById(R.id.mesa_fragmentcontainer_mainactivity);
+        ViewGroup preferenceContainer = findViewById(R.id.mesa_container_mainactivity);
         ViewUtils.updateListBothSideMargin(this, preferenceContainer);
     }
 
@@ -155,7 +158,7 @@ public class MainActivity extends BaseAppBarActivity {
         }
 
         mTabLayout.addOnTabSelectedListener(new SeslTabLayout.OnTabSelectedListener() {
-            public void onTabSelected(SeslTabLayout.SeslTab tab) {
+            public void onTabSelected(SeslTabLayout.Tab tab) {
                 int tabPosition = tab.getPosition();
                 mTabManager.setTabPosition(tabPosition);
                 setCurrentItem();
@@ -163,7 +166,7 @@ public class MainActivity extends BaseAppBarActivity {
                 if (fragment != null) fragment.onTabSelected();
             }
 
-            public void onTabUnselected(SeslTabLayout.SeslTab tab) {
+            public void onTabUnselected(SeslTabLayout.Tab tab) {
                 int tabPosition = tab.getPosition();
                 if (appBar != null) appBar.dismissMoreMenuPopupWindow();
                 closeContextMenu();
@@ -171,7 +174,7 @@ public class MainActivity extends BaseAppBarActivity {
                 if (fragment != null) fragment.onTabUnselected();
             }
 
-            public void onTabReselected(SeslTabLayout.SeslTab tab) { }
+            public void onTabReselected(SeslTabLayout.Tab tab) { }
         });
 
         mTabLayout.setup(this);
@@ -182,7 +185,7 @@ public class MainActivity extends BaseAppBarActivity {
     private void setCurrentItem() {
         if (mTabLayout.isEnabled()) {
             int tabPosition = mTabManager.getCurrentTab();
-            SeslTabLayout.SeslTab tab = mTabLayout.getTabAt(tabPosition);
+            SeslTabLayout.Tab tab = mTabLayout.getTabAt(tabPosition);
             if (tab != null) {
                 tab.select();
                 setFragment(tabPosition);

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.mesalabs.on.romcontrol.ui.preference.MesaTipsCardViewPreference
+            android:key="tip0"
+            android:title="Hey there!"
+            android:summary="Welcome to the final form of a ROM Control. #morelife"/>
+
+        <com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceCategory
+            android:key="padding"/>
+
+        <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreference
+            android:key="key0"
+            android:title="Test Switch 0"
+            android:summary="Test Summary"
+            android:defaultValue="true" />
+
+        <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreference
+            android:key="key1"
+            android:title="Test Switch 1"
+            android:summary="Test Summary"
+            android:defaultValue="true" />
+
+        <com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceCategory
+            android:key="category2"
+            android:title="Not tested classes">
+
+                <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreferenceScreen
+                    android:key="switchbar_test"
+                    android:title="SwitchPrefScreen"
+                    android:defaultValue="false"/>
+
+                <com.mesalabs.on.romcontrol.ui.preference.MesaEditTextPreference
+                    android:key="key5"
+                    android:title="EditTextPreference" />
+
+                <com.mesalabs.on.romcontrol.ui.preference.MesaCheckBoxPreference
+                    android:key="key6"
+                    android:title="SeslCheckBoxPreference"
+                    android:summary="Bla bla bla bla bla bla"
+                    android:defaultValue="true" />
+
+                <com.mesalabs.on.romcontrol.ui.preference.MesaSeekBarPreference
+                    android:key="key81"
+                    android:title="SeslSeekBarPreference"
+                    android:summary="SeslSeekBarPreference"
+                    android:defaultValue="200"
+                    app:min="50"
+                    app:max="250"
+                    app:showSeekBarValue="true"
+                    app:units="px"
+                    app:updatesContinuously="true"/>
+
+                <com.mesalabs.on.romcontrol.ui.preference.MesaColorPickerPreference
+                    android:key="color1"
+                    android:title="ColorPickerPreference the real one"
+                    android:summary="Things are getting interesting..."
+                    android:defaultValue="#252525"
+                    app:showAlphaSlider="true"/>
+
+                <com.mesalabs.on.romcontrol.ui.preference.MesaListPreference
+                    android:key="key7"
+                    android:title="SeslListPreference"
+                    android:summary="Bla bla bla bla bla bla"
+                    android:entries="@array/mesa_testpref_names_array"
+                    android:entryValues="@array/mesa_testpref_values_array" />
+
+                <com.mesalabs.on.romcontrol.ui.preference.MesaDropDownPreference
+                    android:key="key8"
+                    android:title="DropDownPreference"
+                    android:summary="Bla bla bla bla bla bla"
+                    android:entries="@array/mesa_testpref_names_array"
+                    android:entryValues="@array/mesa_testpref_values_array" />
+
+                <com.mesalabs.on.romcontrol.ui.preference.MesaMultiSelectListPreference
+                    android:key="key82"
+                    android:title="SeslMultiSelectListPreference"
+                    android:summary="List to choose from"
+                    android:entries="@array/mesa_testpref_names_array"
+                    android:entryValues="@array/mesa_testpref_values_array"/>
+
+        </com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceCategory>
+
+</com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceScreen>

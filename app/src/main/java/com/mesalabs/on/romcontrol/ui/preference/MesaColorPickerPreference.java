@@ -96,7 +96,7 @@ public class MesaColorPickerPreference extends SeslPreference implements SeslPre
             return;
         }
 
-        GradientDrawable drawable = (GradientDrawable) getContext().getDrawable(mIsNightMode ? R.drawable.sesl_color_picker_used_color_item_slot_dark : R.drawable.sesl_color_picker_used_color_item_slot_light);
+        GradientDrawable drawable = (GradientDrawable) getContext().getDrawable(R.drawable.mesa_rc_colorpickerpref_widget);
         drawable.setColor(mValue);
 
         mPreview.setBackground(drawable);
