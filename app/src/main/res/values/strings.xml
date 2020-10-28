@@ -107,8 +107,8 @@
     <string name="sesl_color_picker_yellow">Yellow</string>
     <string name="sesl_picker_done">Done</string>
 
-    <string name="sesl_font_family_condensed">sec-roboto-condensed</string>
-    <string name="sesl_font_family_regular">sec-roboto-light</string>
-    <string name="sesl_appbar_scrolling_view_behavior">com.samsung.android.ui.appbar.SeslAppBarLayout$ScrollingViewBehavior</string>
+    <string name="sesl_font_family_condensed" translatable="false">sec-roboto-condensed</string>
+    <string name="sesl_font_family_regular" translatable="false">sec-roboto-light</string>
+    <string name="sesl_appbar_scrolling_view_behavior" translatable="false">com.samsung.android.ui.appbar.SeslAppBarLayout$ScrollingViewBehavior</string>
 
 </resources>
