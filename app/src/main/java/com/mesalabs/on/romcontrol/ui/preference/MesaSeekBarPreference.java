@@ -141,6 +141,7 @@ public class MesaSeekBarPreference extends SeslPreference {
         }
 
         try {
+            mSeekBar.setMode(5 /* expand */);
             mSeekBar.setOnSeekBarChangeListener(mSeekBarChangeListener);
             mSeekBar.setMax(mMax - mMin);
 
