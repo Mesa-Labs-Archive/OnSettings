@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat;
 import com.mesalabs.on.romcontrol.R;
 import com.samsung.android.ui.preference.PreferenceViewHolder;
 import com.samsung.android.ui.preference.SeslPreference;
+import com.samsung.android.ui.widget.SeslTooltip;
 
 /*
  * On Settings
@@ -24,6 +25,7 @@ import com.samsung.android.ui.preference.SeslPreference;
  */
 
 public class MesaTipsCardViewPreference extends SeslPreference {
+    private Context mContext;
     private TipsCardListener mTipsCardListener;
     private int mTextColor;
 
@@ -37,6 +39,7 @@ public class MesaTipsCardViewPreference extends SeslPreference {
 
     public MesaTipsCardViewPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        mContext = context;
         setSelectable(false);
         setLayoutResource(R.layout.mesa_preference_tipcardviewpref_layout);
         mTextColor = ContextCompat.getColor(context, R.color.sesl_primary_text_color_dark);
@@ -49,6 +52,7 @@ public class MesaTipsCardViewPreference extends SeslPreference {
         ((TextView) preferenceViewHolder.itemView.findViewById(android.R.id.title)).setTextColor(mTextColor);
         ((TextView) preferenceViewHolder.itemView.findViewById(android.R.id.summary)).setTextColor(mTextColor);
 
+        SeslTooltip.setTooltipText(preferenceViewHolder.itemView.findViewById(R.id.mesa_cancelbutton_tipscardviewpref), mContext.getString(R.string.mesa_tipscardviewpref_cancel));
         preferenceViewHolder.itemView.findViewById(R.id.mesa_cancelbutton_tipscardviewpref).setOnClickListener(new View.OnClickListener() {
             public final void onClick(View view) {
                 mTipsCardListener.onCancelClicked(view);

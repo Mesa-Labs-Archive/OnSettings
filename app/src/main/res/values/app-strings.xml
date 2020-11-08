@@ -3,4 +3,6 @@
     <string name="mesa_onsettings">On Settings</string>
 
     <string name="mesa_about_app">About On Settings</string>
+
+    <string name="mesa_tipscardviewpref_cancel">Cancel</string>
 </resources>
