@@ -31,11 +31,14 @@ public class MesaSeekBarPreference extends SeslPreference {
     private static final String TAG = "MesaSeekBarPreference";
     @SuppressWarnings("WeakerAccess")
             int mSeekBarValue;
+    private int mSeekBarMode;
+    private boolean mSeekBarSeamless;
     @SuppressWarnings("WeakerAccess")
         String mUnits;
     @SuppressWarnings("WeakerAccess")
             int mMin;
     private int mMax;
+    private int mOverlapPoint;
     private int mSeekBarIncrement;
     @SuppressWarnings("WeakerAccess")
             boolean mTrackingTouch;
@@ -111,9 +114,12 @@ public class MesaSeekBarPreference extends SeslPreference {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MesaSeekBarPreference, defStyleAttr, defStyleRes);
         mMin = a.getInt(R.styleable.MesaSeekBarPreference_min, 0);
         setMax(a.getInt(R.styleable.MesaSeekBarPreference_max, 100));
+        mOverlapPoint = a.getInt(R.styleable.MesaSeekBarPreference_overlap, -1);
         setSeekBarIncrement(a.getInt(R.styleable.MesaSeekBarPreference_seekBarIncrement, 0));
         mAdjustable = a.getBoolean(R.styleable.MesaSeekBarPreference_adjustable, true);
         mShowSeekBarValue = a.getBoolean(R.styleable.MesaSeekBarPreference_showSeekBarValue, false);
+        mSeekBarMode = a.getInt(R.styleable.MesaSeekBarPreference_seekBarMode, 0);
+        mSeekBarSeamless = a.getBoolean(R.styleable.MesaSeekBarPreference_seekBarSeamless, false);
 
         mUnits = a.getString(R.styleable.MesaSeekBarPreference_units);
         if (mUnits == null)
@@ -140,20 +146,20 @@ public class MesaSeekBarPreference extends SeslPreference {
             return;
         }
 
-        try {
-            mSeekBar.setMode(5 /* expand */);
-            mSeekBar.setOnSeekBarChangeListener(mSeekBarChangeListener);
-            mSeekBar.setMax(mMax - mMin);
+        mSeekBar.setOnSeekBarChangeListener(mSeekBarChangeListener);
+        mSeekBar.setMode(mSeekBarMode);
+        mSeekBar.setMax(mMax - mMin);
+        mSeekBar.setOverlapPointForDualColor(mOverlapPoint);
+        mSeekBar.setSeamless(mSeekBarSeamless);
 
-            if (mSeekBarIncrement != 0) {
-                mSeekBar.setKeyProgressIncrement(mSeekBarIncrement);
-            } else {
-                mSeekBarIncrement = mSeekBar.getKeyProgressIncrement();
-            }
-            mSeekBar.setProgress(mSeekBarValue - mMin);
-            updateLabelValue(mSeekBarValue);
-            mSeekBar.setEnabled(isEnabled());
-        } catch (Throwable ignored) { }
+        if (mSeekBarIncrement != 0) {
+            mSeekBar.setKeyProgressIncrement(mSeekBarIncrement);
+        } else {
+            mSeekBarIncrement = mSeekBar.getKeyProgressIncrement();
+        }
+        mSeekBar.setProgress(mSeekBarValue - mMin);
+        updateLabelValue(mSeekBarValue);
+        mSeekBar.setEnabled(isEnabled());
     }
 
     @Override
@@ -265,10 +271,8 @@ public class MesaSeekBarPreference extends SeslPreference {
             if (callChangeListener(seekBarValue)) {
                 setValueInternal(seekBarValue, false);
             } else {
-                try {
-                    seekBar.setProgress(mSeekBarValue - mMin);
-                    updateLabelValue(mSeekBarValue);
-                } catch (Throwable ignored) { }
+                seekBar.setProgress(mSeekBarValue - mMin);
+                updateLabelValue(mSeekBarValue);
             }
         }
     }

@@ -9,10 +9,16 @@
     <declare-styleable name="MesaSeekBarPreference">
         <attr name="min" />
         <attr name="max" format="integer" />
+        <attr name="overlap" format="integer" />
         <attr name="units" format="string" />
         <attr name="seekBarIncrement" />
         <attr name="adjustable" />
         <attr name="showSeekBarValue" />
         <attr name="updatesContinuously" />
+        <attr name="seekBarMode">
+            <enum name="expand" value="5" />
+            <enum name="standard" value="0" />
+        </attr>
+        <attr name="seekBarSeamless" format="boolean" />
     </declare-styleable>
 </resources>

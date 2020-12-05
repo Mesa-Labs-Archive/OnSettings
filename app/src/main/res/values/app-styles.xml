@@ -38,6 +38,7 @@
     <!-- SeslPreference -->
     <style name="mesa_RC_PreferenceThemeStyle" parent="@style/mesa_PreferenceThemeStyle">
         <item name="dialogPreferenceStyle">@style/mesa_RC_SeslDialogPreferenceStyle</item>
+        <item name="seekBarPreferenceStyle">@style/mesa_RC_SeslSeekBarPreferenceStyle</item>
     </style>
 
     <style name="mesa_RC_SeslDialogPreferenceStyle" parent="@style/mesa_SeslDialogPreferenceStyle">
@@ -45,6 +46,10 @@
         <item name="android:negativeButtonText">@string/mesa_cancel</item>
         <item name="positiveButtonText">@string/mesa_done</item>
         <item name="negativeButtonText">@string/mesa_cancel</item>
+    </style>
+
+    <style name="mesa_RC_SeslSeekBarPreferenceStyle" parent="@style/mesa_SeslSeekBarPreferenceStyle">
+        <item name="showSeekBarValue">false</item>
     </style>
 
     <!-- Sesl TabLayout-->
