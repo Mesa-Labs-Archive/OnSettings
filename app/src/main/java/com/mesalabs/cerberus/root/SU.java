@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import com.mesalabs.on.romcontrol.utils.LogUtils;
+import com.mesalabs.ten.romcontrol.utils.LogUtils;
 
 /*
  * Cerberus Core App

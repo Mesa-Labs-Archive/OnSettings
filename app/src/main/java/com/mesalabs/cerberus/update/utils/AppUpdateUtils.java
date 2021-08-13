@@ -13,12 +13,11 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
-import com.mesalabs.on.romcontrol.OnSettingsApp;
-import com.mesalabs.on.romcontrol.R;
+import com.mesalabs.ten.romcontrol.TenSettingsApp;
 import com.mesalabs.cerberus.update.data.AppData;
 import com.mesalabs.cerberus.update.download.AppDownload;
 import com.mesalabs.cerberus.update.tasks.AppXMLParser;
-import com.mesalabs.on.romcontrol.utils.LogUtils;
+import com.mesalabs.ten.romcontrol.utils.LogUtils;
 
 /*
  * Cerberus Core App
@@ -85,7 +84,7 @@ public class AppUpdateUtils {
         int newStatus = STATE_ERROR;
 
         if (appsDataArr != null && !appsDataArr.isEmpty()) {
-            int currentVer = OnSettingsApp.getAppVersionCode();
+            int currentVer = TenSettingsApp.getAppVersionCode();
             int onlineVer = 0;
 
             for (int i = 0; i < appsDataArr.size(); i++) {

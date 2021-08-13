@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.google.android.material.internal.ThemeEnforcement;
-import com.mesalabs.on.romcontrol.R;
+import com.mesalabs.ten.romcontrol.R;
 
 /*
  * Cerberus Core App

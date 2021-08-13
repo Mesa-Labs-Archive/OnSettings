@@ -17,12 +17,12 @@
         <item>Notifications</item>
     </string-array>
     <string-array name="mesa_tab_class_mainactivity">
-        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment1</item>
-        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
-        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
-        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
-        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
-        <item>com.mesalabs.on.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+        <item>com.mesalabs.ten.romcontrol.fragment.rc.home.SettingsTestFragment1</item>
+        <item>com.mesalabs.ten.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+        <item>com.mesalabs.ten.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+        <item>com.mesalabs.ten.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+        <item>com.mesalabs.ten.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
+        <item>com.mesalabs.ten.romcontrol.fragment.rc.home.SettingsTestFragment2</item>
     </string-array>
 
 

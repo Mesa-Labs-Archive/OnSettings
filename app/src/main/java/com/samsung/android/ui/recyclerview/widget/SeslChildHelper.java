@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mesalabs.on.romcontrol.utils.LogUtils;
+import com.mesalabs.ten.romcontrol.utils.LogUtils;
 
 /*
  * Cerberus Core App

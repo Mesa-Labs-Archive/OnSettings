@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import com.mesalabs.cerberus.root.SU;
-import com.mesalabs.on.romcontrol.utils.LogUtils;
+import com.mesalabs.ten.romcontrol.utils.LogUtils;
 
 /*
  * Cerberus Core App

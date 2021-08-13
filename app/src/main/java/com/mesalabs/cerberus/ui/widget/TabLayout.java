@@ -12,7 +12,7 @@ import android.view.Window;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-import com.mesalabs.on.romcontrol.R;
+import com.mesalabs.ten.romcontrol.R;
 import com.mesalabs.cerberus.utils.Utils;
 import com.mesalabs.cerberus.utils.ViewUtils;
 import com.samsung.android.ui.tabs.SeslTabLayout;

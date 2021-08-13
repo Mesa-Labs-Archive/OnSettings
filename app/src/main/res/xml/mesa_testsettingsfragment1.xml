@@ -1,85 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <com.mesalabs.on.romcontrol.ui.preference.MesaTipsCardViewPreference
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaTipsCardViewPreference
             android:key="tip0"
-            android:title="Hey there!"
-            android:summary="Welcome to the final form of a ROM Control. #morelife"/>
+            android:title="Hello world!"
+            android:summary="I'm a tip card :3"/>
 
-        <com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceCategory
-            android:key="padding"/>
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory
+            android:key="category0"
+            android:title="On/Off Preferences">
 
-        <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreference
-            android:key="key0"
-            android:title="Test Switch 0"
-            android:summary="Test Summary"
-            android:defaultValue="true" />
-
-        <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreference
-            android:key="key1"
-            android:title="Test Switch 1"
-            android:summary="Test Summary"
-            android:defaultValue="true" />
-
-        <com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceCategory
-            android:key="category2"
-            android:title="Not tested classes">
-
-                <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreferenceScreen
-                    android:key="switchbar_test"
-                    android:title="SwitchPrefScreen"
-                    android:defaultValue="false"/>
-
-                <com.mesalabs.on.romcontrol.ui.preference.MesaEditTextPreference
-                    android:key="key5"
-                    android:title="EditTextPreference" />
-
-                <com.mesalabs.on.romcontrol.ui.preference.MesaCheckBoxPreference
-                    android:key="key6"
-                    android:title="SeslCheckBoxPreference"
-                    android:summary="Bla bla bla bla bla bla"
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaSwitchPreference
+                    android:key="key0"
+                    android:title="MesaSwitchPreference"
+                    android:summary="Classic but lovely switch"
                     android:defaultValue="true" />
 
-                <com.mesalabs.on.romcontrol.ui.preference.MesaSeekBarPreference
-                    android:key="key81"
-                    android:title="SeslSeekBarPreference"
-                    android:summary="SeslSeekBarPreference"
-                    android:defaultValue="200"
-                    app:min="50"
-                    app:max="250"
-                    app:showSeekBarValue="true"
-                    app:units="px"
-                    app:updatesContinuously="true"/>
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaSwitchPreferenceScreen
+                    android:key="key1"
+                    android:title="MesaSwitchPreferenceScreen"
+                    android:summary="Switch but with an inner activity"
+                    android:defaultValue="false"/>
 
-                <com.mesalabs.on.romcontrol.ui.preference.MesaColorPickerPreference
-                    android:key="color1"
-                    android:title="ColorPickerPreference the real one"
-                    android:summary="Things are getting interesting..."
-                    android:defaultValue="#252525"
-                    app:showAlphaSlider="true"/>
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaCheckBoxPreference
+                    android:key="key2"
+                    android:title="MesaCheckBoxPreference"
+                    android:summary="Uh so outdated"
+                    android:defaultValue="true" />
 
-                <com.mesalabs.on.romcontrol.ui.preference.MesaListPreference
-                    android:key="key7"
-                    android:title="SeslListPreference"
+        </com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory>
+
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory
+            android:key="category1"
+            android:title="Select Preferences">
+
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaListPreference
+                    android:key="key3"
+                    android:title="MesaListPreference"
                     android:summary="Bla bla bla bla bla bla"
                     android:entries="@array/mesa_testpref_names_array"
                     android:entryValues="@array/mesa_testpref_values_array" />
 
-                <com.mesalabs.on.romcontrol.ui.preference.MesaDropDownPreference
-                    android:key="key8"
-                    android:title="DropDownPreference"
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaDropDownPreference
+                    android:key="key4"
+                    android:title="MesaDropDownPreference"
                     android:summary="Bla bla bla bla bla bla"
                     android:entries="@array/mesa_testpref_names_array"
                     android:entryValues="@array/mesa_testpref_values_array" />
 
-                <com.mesalabs.on.romcontrol.ui.preference.MesaMultiSelectListPreference
-                    android:key="key82"
-                    android:title="SeslMultiSelectListPreference"
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaMultiSelectListPreference
+                    android:key="key5"
+                    android:title="MesaMultiSelectListPreference"
                     android:summary="List to choose from"
                     android:entries="@array/mesa_testpref_names_array"
                     android:entryValues="@array/mesa_testpref_values_array"/>
 
-        </com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceCategory>
+        </com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory>
 
-</com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceScreen>
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory
+            android:key="category2"
+            android:title="Other Preferences">
+
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaColorPickerPreference
+                    android:key="key6"
+                    android:title="MesaColorPickerPreference"
+                    android:defaultValue="#252525"
+                    app:showAlphaSlider="true"/>
+
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaEditTextPreference
+                    android:key="key7"
+                    android:title="MesaEditTextPreference" />
+
+        </com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory>
+
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory
+            android:key="category3"
+            android:title="SeekBarPreference">
+
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaSeekBarPreference
+                    android:key="key8"
+                    android:title="Standard SeekBar"
+                    android:summary="min 1; max 10"
+                    android:defaultValue="5"
+                    app:min="1"
+                    app:max="10" />
+
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaSeekBarPreference
+                    android:key="key9"
+                    android:title="Expand SeekBar"
+                    android:summary="min 1; max 100"
+                    android:defaultValue="30"
+                    app:min="1"
+                    app:max="100"
+                    app:seekBarMode="expand" />
+
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaSeekBarPreference
+                    android:key="key10"
+                    android:title="Standard SeekBar+Overlap"
+                    android:summary="min 1; max 255; overlap 200; showSeekBarValue"
+                    android:defaultValue="50"
+                    app:min="1"
+                    app:max="255"
+                    app:overlap="200"
+                    app:showSeekBarValue="true" />
+
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaSeekBarPreference
+                    android:key="key11"
+                    android:title="Expand SeekBar"
+                    android:summary="min 1; max 5; seekBarSeamless"
+                    android:defaultValue="2"
+                    app:min="1"
+                    app:max="5"
+                    app:seekBarMode="expand"
+                    app:seekBarSeamless="true" />
+
+        </com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory>
+
+</com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceScreen>

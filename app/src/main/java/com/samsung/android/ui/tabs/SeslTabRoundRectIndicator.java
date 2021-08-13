@@ -15,7 +15,7 @@ import android.view.animation.ScaleAnimation;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
 
-import com.mesalabs.on.romcontrol.R;
+import com.mesalabs.ten.romcontrol.R;
 import com.mesalabs.cerberus.utils.Utils;
 import com.samsung.android.ui.view.animation.SeslAnimationUtils;
 

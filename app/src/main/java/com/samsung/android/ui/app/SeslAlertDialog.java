@@ -25,7 +25,7 @@ import androidx.annotation.StringRes;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AppCompatDialog;
 
-import com.mesalabs.on.romcontrol.R;
+import com.mesalabs.ten.romcontrol.R;
 
 /*
  * Cerberus Core App

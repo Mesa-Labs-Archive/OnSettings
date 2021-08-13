@@ -44,8 +44,8 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.internal.CollapsingTextHelper;
 
-import com.mesalabs.on.romcontrol.R;
-import com.mesalabs.on.romcontrol.utils.LogUtils;
+import com.mesalabs.ten.romcontrol.R;
+import com.mesalabs.ten.romcontrol.utils.LogUtils;
 import com.mesalabs.cerberus.utils.ViewUtils;
 
 /*

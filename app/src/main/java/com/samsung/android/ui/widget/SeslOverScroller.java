@@ -6,7 +6,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 import java.lang.reflect.Array;
 
-import com.mesalabs.on.romcontrol.utils.LogUtils;
+import com.mesalabs.ten.romcontrol.utils.LogUtils;
 import com.mesalabs.cerberus.utils.Utils;
 
 /*

@@ -37,8 +37,8 @@ import androidx.customview.view.AbsSavedState;
 
 import com.google.android.material.internal.ContextUtils;
 import com.google.android.material.internal.ThemeEnforcement;
-import com.mesalabs.on.romcontrol.R;
-import com.mesalabs.on.romcontrol.utils.LogUtils;
+import com.mesalabs.ten.romcontrol.R;
+import com.mesalabs.ten.romcontrol.utils.LogUtils;
 import com.samsung.android.ui.coordinatorlayout.widget.ABLBehavior;
 import com.samsung.android.ui.coordinatorlayout.widget.SeslCoordinatorLayout;
 

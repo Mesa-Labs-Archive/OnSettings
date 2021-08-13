@@ -13,7 +13,7 @@ import java.util.List;
 import androidx.collection.SimpleArrayMap;
 import androidx.core.content.res.TypedArrayUtils;
 
-import com.mesalabs.on.romcontrol.R;
+import com.mesalabs.ten.romcontrol.R;
 
 /*
  * Cerberus Core App

@@ -11,7 +11,7 @@ import android.widget.CompoundButton;
 
 import androidx.core.content.res.TypedArrayUtils;
 
-import com.mesalabs.on.romcontrol.R;
+import com.mesalabs.ten.romcontrol.R;
 import com.samsung.android.ui.widget.SeslSwitch;
 
 /*

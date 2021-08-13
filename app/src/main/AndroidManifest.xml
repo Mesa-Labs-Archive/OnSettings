@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mesalabs.on.romcontrol">
+    package="com.mesalabs.ten.romcontrol">
 
     <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions"/>
@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
 
-    <application android:name="com.mesalabs.on.romcontrol.OnSettingsApp" android:allowBackup="false" android:hardwareAccelerated="true" android:persistent="true" android:icon="@mipmap/ic_launcher" android:label="@string/mesa_onsettings" android:supportsRtl="true" android:theme="@style/mesa_AppStyle.DayNight.NoActionBar">
+    <application android:name="com.mesalabs.ten.romcontrol.TenSettingsApp" android:allowBackup="false" android:hardwareAccelerated="true" android:persistent="true" android:icon="@mipmap/ic_launcher" android:label="@string/mesa_tensettings" android:supportsRtl="true" android:theme="@style/mesa_AppStyle.DayNight.NoActionBar">
 
         <meta-data android:name="SamsungBasicInteraction" android:value="SEP10"/>
         <meta-data android:name="com.samsung.android.icon_container.has_icon_container" android:value="true"/>

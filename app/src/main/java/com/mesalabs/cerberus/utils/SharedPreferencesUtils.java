@@ -10,7 +10,7 @@ import java.util.Set;
 
 import androidx.annotation.NonNull;
 
-import com.mesalabs.on.romcontrol.OnSettingsApp;
+import com.mesalabs.ten.romcontrol.TenSettingsApp;
 
 /*
  * Cerberus Core App
@@ -50,7 +50,7 @@ public final class SharedPreferencesUtils {
      * @return the single {@link SharedPreferencesUtils} instance
      */
     public static SharedPreferencesUtils getInstance(String spName) {
-        if (isSpace(spName)) spName = OnSettingsApp.getAppPackageName() + "_preferences";
+        if (isSpace(spName)) spName = TenSettingsApp.getAppPackageName() + "_preferences";
         SharedPreferencesUtils spUtils = SP_UTILS_MAP.get(spName);
         if (spUtils == null) {
             synchronized (SharedPreferencesUtils.class) {
@@ -65,7 +65,7 @@ public final class SharedPreferencesUtils {
     }
 
     private SharedPreferencesUtils(final String spName) {
-        sp = OnSettingsApp.getAppContext().getSharedPreferences(spName, Context.MODE_PRIVATE);
+        sp = TenSettingsApp.getAppContext().getSharedPreferences(spName, Context.MODE_PRIVATE);
     }
 
     /**

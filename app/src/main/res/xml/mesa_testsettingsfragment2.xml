@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceScreen
+<com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreference
-            android:key="key1"
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaSwitchPreference
+            android:key="key12"
             android:title="Very long title to test if this shit works"
             android:summary="Very long summary to test if this shit works and can be used as a RC App base"
             android:defaultValue="true" />
 
-        <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreference
-            android:key="key2"
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaSwitchPreference
+            android:key="key13"
             android:title="VoLTE"
             android:summary="Enable dis to get volte"
             android:defaultValue="false" />
 
-        <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreference
-            android:key="key3"
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaSwitchPreference
+            android:key="key14"
             android:title="Underscreen fp"
             android:summary="OK this shit is going far away"
             android:defaultValue="true" />
 
-        <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreference
-            android:key="key4"
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaSwitchPreference
+            android:key="key15"
             android:title="Press this to die instantly"
             android:summary="No I was jk don't do i-"
             android:defaultValue="true" />
 
-        <com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceCategory
-            android:key="category2">
+        <com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory
+            android:key="category4">
 
-                <com.mesalabs.on.romcontrol.ui.preference.MesaSwitchPreferenceScreen
-                    android:key="key4"
+                <com.mesalabs.ten.romcontrol.ui.preference.MesaSwitchPreferenceScreen
+                    android:key="key16"
                     android:title="This should be a inner settings screen"
                     android:summary="Ok boomer"
                     android:defaultValue="false" />
 
-        </com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceCategory>
+        </com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceCategory>
 
-</com.mesalabs.on.romcontrol.ui.preference.MesaPreferenceScreen>
+</com.mesalabs.ten.romcontrol.ui.preference.MesaPreferenceScreen>
